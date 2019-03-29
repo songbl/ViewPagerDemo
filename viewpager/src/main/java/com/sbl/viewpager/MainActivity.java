@@ -113,9 +113,15 @@ public class MainActivity extends AppCompatActivity  implements ViewPager.OnPage
         vp.setOnPageChangeListener(this);
     }
 
+    /**
+     * 滑动得时候不断得调用该方法，这不就是通过layoutParms产生滑动啊
+     * @param position      当前页面的位置
+     * @param positionOffset     滑动页面的百分比
+     * @param positionOffsetPixels     屏幕上滑动的像素
+     */
 
     @Override
-    public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {//滑动得时候不断得调用该方法，这不就是通过layoutParms产生滑动啊
+    public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
 
         // 页面滑动的时候，动态的获取小圆点的左边距
         int leftMargin = (int) (mPointMargin * (position + positionOffset));
