@@ -83,6 +83,7 @@ public class MainActivity extends AppCompatActivity  implements ViewPager.OnPage
 
             point.setLayoutParams(params2);
             mllPointGroup.addView(point);
+
         }
 
         // 获取视图树对象，通过监听白点布局的显示，然后获取两个圆点之间的距离
